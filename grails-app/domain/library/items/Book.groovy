@@ -8,11 +8,19 @@ import javax.persistence.Table
 @Resource(uri='/book', formats=['json', 'xml'])
 class Book {
 
+    static belongsTo = [category: Category, author: Author]
     Long id
-    String label
+    String title
+    Date publishedDate
+    String isbn
+    String description
+    String publisher
+    boolean isAvailable = Boolean.TRUE
+
 
     static constraints = {
-        id blank:false
-        label blank: false
+        id nullable: false, blank:false
+        title nullable: false, blank: false
+        isbn unique: true, nullable: false
     }
 }
