@@ -1,5 +1,6 @@
 package library.items
 
+import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
@@ -9,10 +10,16 @@ class BookController {
 
     static allowedMethods = [index: "GET", save: "POST", update: "PUT", delete: "DELETE"]
 
+//    @Secured("ROLE_BOSS")
+//    def main() {
+//        redirect(uri:'/')
+//    }
+    @Secured("ROLE_BOSS")
     def index() {
 //        Book book = new Book(id: 1, label: "delo")
         Book book = new Book()
-        respond book.findById(1)
+//        respond book.findById(1)
+        respond book
     }
 
     def show(Long id) {

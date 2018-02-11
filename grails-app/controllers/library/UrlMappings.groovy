@@ -9,6 +9,7 @@ class UrlMappings {
 //            }
 //        }
 
+//        ""(controller:"book", action: "main", method:"GET")
         "/book"(controller:"book", action: "index", method:"GET")
         "/"(view: "/index")
 //        "500"(view: '/error')
