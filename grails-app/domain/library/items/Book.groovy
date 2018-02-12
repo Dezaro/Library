@@ -5,7 +5,7 @@ import grails.rest.*
 import javax.persistence.Table
 
 @Table(name="Book")
-@Resource(uri='/book', formats=['json', 'xml'])
+@Resource(uri='/api/book', formats=['json', 'xml'])
 class Book {
 
     static belongsTo = [category: Category, author: Author]

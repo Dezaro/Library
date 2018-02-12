@@ -14,7 +14,7 @@ Ext.define('Library.Application', {
     
     launch: function () {
 		 Ext.Ajax.request({
-     url: 'http://localhost:8080/article/1',
+     url: 'http://localhost:8080/book/1',
 
      success: function(response, opts) {
          var obj = Ext.decode(response.responseText);

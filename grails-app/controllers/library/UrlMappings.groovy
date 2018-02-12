@@ -10,7 +10,7 @@ class UrlMappings {
 //        }
 
 //        ""(controller:"book", action: "main", method:"GET")
-        "/book"(controller:"book", action: "index", method:"GET")
+        "/api/book"(controller:"book", action: "index", method:"GET")
         "/"(view: "/index")
 //        "500"(view: '/error')
 //        "404"(view: '/notFound')

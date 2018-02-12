@@ -5,6 +5,8 @@ import library.items.*;
 class BootStrap {
 
     def init = { servletContext ->
+        def book = new Book(id:1, title: 'test', isbn: "1111111")
+        book.save()
         def authorities = ['ROLE_BOSS', 'ROLE_EMPLOYEE']
         authorities.each { String authority ->
             if ( !SecurityRole.findByAuthority(authority) ) {
